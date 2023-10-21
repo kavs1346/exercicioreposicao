@@ -8,7 +8,7 @@
         public $Status;
 
         //Método construtor (Propriedade)
-        function_construnt($Titular,$Agencia,$Conta,$Saldo,$Status){
+        function __construct($Titular,$Agencia,$Conta,$Saldo,$Status){
             $this->Cliente = $Titular;
             $this->Agencia = $Agencia;
             $this->Conta = $Conta;
@@ -17,7 +17,7 @@
         }
 
         //Método Destrutor
-        function _destruct(){
+        function __destruct(){
             echo"<br/><small>O Objeto foi destruido.</small>";
         }
 
@@ -30,14 +30,14 @@
 
         //Método Depositar() Depositar uma quantia, acrecendo o saldo
         function Depositar($quantia){
-            if( $qauntia > 0){
+            if( $quantia > 0){
                 $this->Saldo += $quantia;
             }
         }
 
         //Método ObterSaldo() Retorna o saldo da conta
         function ObterSaldo(){
-            retur $this->Saldo;
-        }
+            return $this->Saldo;
+        }
     }
-   ?>
+?>
